@@ -1,12 +1,13 @@
+
 import { Book, Music, Camera, Coffee, Bike, Palette, Plane, Gamepad, Dumbbell, CookingPot } from "lucide-react";
 
 export type LifestyleType = 
-  | "Creative Explorer" 
-  | "Digital Enthusiast" 
-  | "Active Adventurer" 
-  | "Social Connector" 
-  | "Mindful Observer"
-  | "Culinary Enthusiast";
+  | "창의적 탐험가" 
+  | "디지털 애호가" 
+  | "액티브 모험가" 
+  | "소셜 커넥터" 
+  | "사색적 관찰자"
+  | "요리 애호가";
 
 export type OptionType = {
   id: string;
@@ -99,94 +100,94 @@ export const questions: QuestionType[] = [
 export const hobbies: HobbyType[] = [
   {
     id: "h1",
-    name: "Photography",
-    description: "Capture moments and express your unique perspective through visual storytelling.",
+    name: "사진 촬영",
+    description: "순간을 포착하고 시각적 스토리텔링을 통해 당신만의 관점을 표현하세요.",
     icon: Camera,
-    lifestyleMatch: ["Creative Explorer", "Mindful Observer"],
+    lifestyleMatch: ["창의적 탐험가", "사색적 관찰자"],
     score: 0
   },
   {
     id: "h2",
-    name: "Gaming",
-    description: "Immerse yourself in digital worlds, narratives, and strategic challenges.",
+    name: "게임",
+    description: "디지털 세계, 이야기 및 전략적 도전에 몰입하세요.",
     icon: Gamepad,
-    lifestyleMatch: ["Digital Enthusiast", "Social Connector"],
+    lifestyleMatch: ["디지털 애호가", "소셜 커넥터"],
     score: 0
   },
   {
     id: "h3",
-    name: "Cycling",
-    description: "Experience freedom and exploration while improving fitness and connecting with nature.",
+    name: "자전거 타기",
+    description: "체력을 향상시키고 자연과 교감하며 자유와 탐험을 경험하세요.",
     icon: Bike,
-    lifestyleMatch: ["Active Adventurer", "Mindful Observer"],
+    lifestyleMatch: ["액티브 모험가", "사색적 관찰자"],
     score: 0
   },
   {
     id: "h4",
-    name: "Reading",
-    description: "Explore countless worlds, perspectives, and ideas through literature.",
+    name: "독서",
+    description: "문학을 통해 무수한 세계, 관점 및 아이디어를 탐색하세요.",
     icon: Book,
-    lifestyleMatch: ["Mindful Observer", "Creative Explorer"],
+    lifestyleMatch: ["사색적 관찰자", "창의적 탐험가"],
     score: 0
   },
   {
     id: "h5",
-    name: "Coffee Tasting",
-    description: "Discover unique flavor profiles and brewing methods from around the world.",
+    name: "커피 테이스팅",
+    description: "전 세계의 독특한 맛 프로필과 추출 방법을 발견하세요.",
     icon: Coffee,
-    lifestyleMatch: ["Mindful Observer", "Culinary Enthusiast"],
+    lifestyleMatch: ["사색적 관찰자", "요리 애호가"],
     score: 0
   },
   {
     id: "h6",
-    name: "Digital Art",
-    description: "Create visual art using digital tools and explore endless creative possibilities.",
+    name: "디지털 아트",
+    description: "디지털 도구를 사용하여 시각 예술을 만들고 무한한 창의적 가능성을 탐색하세요.",
     icon: Palette,
-    lifestyleMatch: ["Creative Explorer", "Digital Enthusiast"],
+    lifestyleMatch: ["창의적 탐험가", "디지털 애호가"],
     score: 0
   },
   {
     id: "h7",
-    name: "Travel Planning",
-    description: "Research and curate unique travel experiences and cultural discoveries.",
+    name: "여행 계획",
+    description: "독특한 여행 경험과 문화적 발견을 연구하고 큐레이션하세요.",
     icon: Plane,
-    lifestyleMatch: ["Creative Explorer", "Social Connector"],
+    lifestyleMatch: ["창의적 탐험가", "소셜 커넥터"],
     score: 0
   },
   {
     id: "h8",
-    name: "Fitness Training",
-    description: "Build strength, endurance and wellness through structured exercise routines.",
+    name: "피트니스 훈련",
+    description: "구조화된 운동 루틴을 통해 힘, 지구력 및 웰빙을 구축하세요.",
     icon: Dumbbell,
-    lifestyleMatch: ["Active Adventurer", "Mindful Observer"],
+    lifestyleMatch: ["액티브 모험가", "사색적 관찰자"],
     score: 0
   },
   {
     id: "h9",
-    name: "Music Discovery",
-    description: "Explore new artists, genres, and the stories behind influential music.",
+    name: "음악 탐색",
+    description: "새로운 아티스트, 장르 및 영향력 있는 음악 이면의 이야기를 탐색하세요.",
     icon: Music,
-    lifestyleMatch: ["Creative Explorer", "Social Connector"],
+    lifestyleMatch: ["창의적 탐험가", "소셜 커넥터"],
     score: 0
   },
   {
     id: "h10",
-    name: "Cooking",
-    description: "Create delicious meals while exploring different cuisines and techniques.",
+    name: "요리",
+    description: "다양한 요리와 기술을 탐색하면서 맛있는 음식을 만드세요.",
     icon: CookingPot,
-    lifestyleMatch: ["Culinary Enthusiast", "Creative Explorer"],
+    lifestyleMatch: ["요리 애호가", "창의적 탐험가"],
     score: 0
   }
 ];
 
 // Lifestyle descriptions
 export const lifestyleDescriptions: Record<LifestyleType, string> = {
-  "Creative Explorer": "You thrive on new ideas and creative expression. You're naturally curious and enjoy discovering unique perspectives and artistic endeavors.",
-  "Digital Enthusiast": "You're passionate about technology and digital culture. You enjoy staying current with innovations and leveraging digital tools.",
-  "Active Adventurer": "You find fulfillment in physical activity and new experiences. You value challenges that engage your body and adventurous spirit.",
-  "Social Connector": "You prioritize meaningful human connections. Your energy comes from interactions and shared experiences with others.",
-  "Mindful Observer": "You appreciate depth and thoughtfulness. You value quality over quantity and find joy in careful observation and reflection.",
-  "Culinary Enthusiast": "You have a passion for flavors, cooking techniques, and food culture. You find joy in creating and experiencing culinary delights."
+  "창의적 탐험가": "당신은 새로운 아이디어와 창의적인 표현에 활력을 얻습니다. 자연스럽게 호기심이 많고 독특한 관점과 예술적 노력을 발견하는 것을 즐깁니다.",
+  "디지털 애호가": "당신은 기술과 디지털 문화에 열정적입니다. 혁신을 따라가고 디지털 도구를 활용하는 것을 즐깁니다.",
+  "액티브 모험가": "당신은 신체 활동과 새로운 경험에서 충족감을 찾습니다. 몸과 모험심을 자극하는 도전을 가치 있게 여깁니다.",
+  "소셜 커넥터": "당신은 의미 있는 인간 관계를 우선시합니다. 다른 사람들과의 상호 작용과 공유 경험에서 에너지를 얻습니다.",
+  "사색적 관찰자": "당신은 깊이와 사려 깊음을 중요시합니다. 양보다 질을 중시하며 주의 깊은 관찰과 성찰에서 기쁨을 찾습니다.",
+  "요리 애호가": "당신은 맛, 요리 기술 및 음식 문화에 대한 열정이 있습니다. 요리 제품을 만들고 경험하는 데서 기쁨을 찾습니다."
 };
 
 // Calculate the lifestyle scores based on the selected answers
@@ -196,12 +197,12 @@ export const calculateResults = (answers: string[]): ResultType => {
   
   // Map the lifestyle types to their index in the scores array
   const lifestyleTypes: LifestyleType[] = [
-    "Creative Explorer", 
-    "Digital Enthusiast", 
-    "Active Adventurer", 
-    "Social Connector", 
-    "Mindful Observer",
-    "Culinary Enthusiast"
+    "창의적 탐험가", 
+    "디지털 애호가", 
+    "액티브 모험가", 
+    "소셜 커넥터", 
+    "사색적 관찰자",
+    "요리 애호가"
   ];
   
   // Calculate the scores based on the selected answers
@@ -258,6 +259,6 @@ export const calculateResults = (answers: string[]): ResultType => {
     primaryLifestyle,
     secondaryLifestyle,
     recommendedHobbies,
-    description: `You primarily identify as a ${primaryLifestyle} with elements of ${secondaryLifestyle}. ${lifestyleDescriptions[primaryLifestyle]}`
+    description: `당신은 주로 ${primaryLifestyle} 성향이며, ${secondaryLifestyle}의 요소도 가지고 있습니다. ${lifestyleDescriptions[primaryLifestyle]}`
   };
 };
