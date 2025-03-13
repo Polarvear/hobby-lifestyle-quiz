@@ -11,6 +11,13 @@ interface QuestionProps {
 }
 
 const Question: React.FC<QuestionProps> = ({ question, selectedOption, onSelectOption }) => {
+  const handleOptionClick = (optionId: string) => {
+    // Only proceed if this option isn't already selected
+    if (selectedOption !== optionId) {
+      onSelectOption(optionId);
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -31,8 +38,8 @@ const Question: React.FC<QuestionProps> = ({ question, selectedOption, onSelectO
             transition={{ duration: 0.3, delay: index * 0.08 }}
           >
             <div
-              className={`option-card ${selectedOption === option.id ? "selected" : ""}`}
-              onClick={() => onSelectOption(option.id)}
+              className={`option-card ${selectedOption === option.id ? "selected" : ""} cursor-pointer hover:bg-gray-50`}
+              onClick={() => handleOptionClick(option.id)}
             >
               <div className="flex items-center justify-between">
                 <span className="text-base sm:text-lg">{option.text}</span>

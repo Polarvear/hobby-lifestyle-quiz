@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,11 +13,32 @@ const QuizContainer: React.FC = () => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [result, setResult] = useState<ResultType | null>(null);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // Effect to handle automatic navigation to next question
+  useEffect(() => {
+    if (isTransitioning && !isCompleted) {
+      const timer = setTimeout(() => {
+        if (currentQuestion < questions.length - 1) {
+          setCurrentQuestion(currentQuestion + 1);
+        } else {
+          // Calculate and display results
+          const quizResult = calculateResults(selectedOptions);
+          setResult(quizResult);
+          setIsCompleted(true);
+        }
+        setIsTransitioning(false);
+      }, 800); // 800ms delay before moving to next question
+
+      return () => clearTimeout(timer);
+    }
+  }, [isTransitioning, currentQuestion, selectedOptions, isCompleted]);
 
   const handleSelectOption = (optionId: string) => {
     const updatedOptions = [...selectedOptions];
     updatedOptions[currentQuestion] = optionId;
     setSelectedOptions(updatedOptions);
+    setIsTransitioning(true);
   };
 
   const handleNext = () => {
@@ -65,17 +86,19 @@ const QuizContainer: React.FC = () => {
           
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: selectedOption ? 1 : 0 }}
+            animate={{ opacity: isLastQuestion && selectedOption ? 1 : 0 }}
             className="mt-8 flex justify-center"
           >
-            <Button
-              onClick={handleNext}
-              className="btn-primary"
-              disabled={!selectedOption}
-            >
-              {isLastQuestion ? "결과 보기" : "다음"}
-              <ArrowRight size={16} className="ml-1.5" />
-            </Button>
+            {isLastQuestion && (
+              <Button
+                onClick={handleNext}
+                className="btn-primary"
+                disabled={!selectedOption}
+              >
+                결과 보기
+                <ArrowRight size={16} className="ml-1.5" />
+              </Button>
+            )}
           </motion.div>
         </>
       ) : (

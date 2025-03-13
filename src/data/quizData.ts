@@ -1,4 +1,3 @@
-
 import { Book, Music, Camera, Coffee, Bike, Palette, Plane, Gamepad, Dumbbell, CookingPot } from "lucide-react";
 
 export type LifestyleType = 
@@ -37,61 +36,61 @@ export type ResultType = {
   description: string;
 };
 
-// The questions for the quiz
+// The questions for the quiz in Korean
 export const questions: QuestionType[] = [
   {
     id: "q1",
-    text: "How do you prefer to spend your free time?",
+    text: "여가 시간을 어떻게 보내는 것을 선호하시나요?",
     options: [
-      { id: "q1a", text: "Creating something with my hands", value: [2, 0, 0, 1, 1, 2] },
-      { id: "q1b", text: "Exploring technology and digital media", value: [1, 3, 0, 1, 0, 0] },
-      { id: "q1c", text: "Being physically active outdoors", value: [1, 0, 3, 1, 1, 0] },
-      { id: "q1d", text: "Socializing with friends", value: [0, 1, 1, 3, 0, 1] },
-      { id: "q1e", text: "Relaxing in a calm environment", value: [1, 0, 0, 0, 3, 1] }
+      { id: "q1a", text: "손으로 무언가를 만들기", value: [2, 0, 0, 1, 1, 2] },
+      { id: "q1b", text: "기술과 디지털 미디어 탐색하기", value: [1, 3, 0, 1, 0, 0] },
+      { id: "q1c", text: "야외에서 신체 활동하기", value: [1, 0, 3, 1, 1, 0] },
+      { id: "q1d", text: "친구들과 어울리기", value: [0, 1, 1, 3, 0, 1] },
+      { id: "q1e", text: "조용한 환경에서 휴식하기", value: [1, 0, 0, 0, 3, 1] }
     ]
   },
   {
     id: "q2",
-    text: "What energizes you the most?",
+    text: "무엇이 당신에게 가장 큰 활력을 주나요?",
     options: [
-      { id: "q2a", text: "Discovering new ideas and perspectives", value: [3, 1, 0, 1, 1, 0] },
-      { id: "q2b", text: "Solving challenging problems", value: [1, 3, 1, 0, 1, 0] },
-      { id: "q2c", text: "Physical activities and challenges", value: [0, 0, 3, 1, 0, 1] },
-      { id: "q2d", text: "Meaningful conversations", value: [1, 0, 0, 3, 1, 1] },
-      { id: "q2e", text: "Sensory experiences and tastes", value: [1, 0, 1, 1, 2, 3] }
+      { id: "q2a", text: "새로운 아이디어와 관점 발견하기", value: [3, 1, 0, 1, 1, 0] },
+      { id: "q2b", text: "도전적인 문제 해결하기", value: [1, 3, 1, 0, 1, 0] },
+      { id: "q2c", text: "체력 활동과 도전", value: [0, 0, 3, 1, 0, 1] },
+      { id: "q2d", text: "의미 있는 대화", value: [1, 0, 0, 3, 1, 1] },
+      { id: "q2e", text: "감각적 경험과 맛", value: [1, 0, 1, 1, 2, 3] }
     ]
   },
   {
     id: "q3",
-    text: "How do you approach learning something new?",
+    text: "새로운 것을 배울 때 어떤 방식을 선호하시나요?",
     options: [
-      { id: "q3a", text: "By experimenting and being hands-on", value: [2, 1, 2, 0, 0, 2] },
-      { id: "q3b", text: "By researching and analyzing information", value: [1, 3, 0, 0, 2, 0] },
-      { id: "q3c", text: "By joining groups or classes", value: [1, 0, 1, 3, 0, 1] },
-      { id: "q3d", text: "By observing others who are skilled", value: [2, 1, 1, 1, 2, 1] },
-      { id: "q3e", text: "By following structured tutorials", value: [1, 2, 1, 0, 1, 2] }
+      { id: "q3a", text: "실험하고 직접 해내기", value: [2, 1, 2, 0, 0, 2] },
+      { id: "q3b", text: "정보를 연구하고 분석하기", value: [1, 3, 0, 0, 2, 0] },
+      { id: "q3c", text: "그룹이나 수업에 참여하기", value: [1, 0, 1, 3, 0, 1] },
+      { id: "q3d", text: "숙련된 사람들 관찰하기", value: [2, 1, 1, 1, 2, 1] },
+      { id: "q3e", text: "구조화된 튜토리얼 따르기", value: [1, 2, 1, 0, 1, 2] }
     ]
   },
   {
     id: "q4",
-    text: "What environment do you find most inspiring?",
+    text: "어떤 환경에서 가장 영감을 받으시나요?",
     options: [
-      { id: "q4a", text: "Artistic spaces like museums or galleries", value: [3, 0, 0, 1, 2, 0] },
-      { id: "q4b", text: "Modern, tech-focused environments", value: [0, 3, 0, 1, 0, 0] },
-      { id: "q4c", text: "Natural outdoor settings", value: [1, 0, 3, 0, 2, 0] },
-      { id: "q4d", text: "Bustling social environments", value: [0, 0, 1, 3, 0, 2] },
-      { id: "q4e", text: "Quiet, contemplative spaces", value: [1, 1, 0, 0, 3, 1] }
+      { id: "q4a", text: "미술관이나 갤러리 같은 예술 공간", value: [3, 0, 0, 1, 2, 0] },
+      { id: "q4b", text: "현대적이고 기술 중심적인 환경", value: [0, 3, 0, 1, 0, 0] },
+      { id: "q4c", text: "자연 속 야외 환경", value: [1, 0, 3, 0, 2, 0] },
+      { id: "q4d", text: "활기찬 사회적 환경", value: [0, 0, 1, 3, 0, 2] },
+      { id: "q4e", text: "조용하고 사색적인 공간", value: [1, 1, 0, 0, 3, 1] }
     ]
   },
   {
     id: "q5",
-    text: "What do you value most in your activities?",
+    text: "활동에서 가장 중요하게 생각하는 가치는 무엇인가요?",
     options: [
-      { id: "q5a", text: "Self-expression and creativity", value: [3, 1, 0, 1, 1, 1] },
-      { id: "q5b", text: "Growth and skill development", value: [1, 2, 2, 0, 1, 2] },
-      { id: "q5c", text: "Physical and mental health", value: [0, 0, 3, 0, 2, 1] },
-      { id: "q5d", text: "Connection and shared experiences", value: [1, 0, 1, 3, 0, 1] },
-      { id: "q5e", text: "Cultural appreciation and knowledge", value: [2, 1, 0, 1, 3, 2] }
+      { id: "q5a", text: "자기 표현과 창의성", value: [3, 1, 0, 1, 1, 1] },
+      { id: "q5b", text: "성장과 기술 개발", value: [1, 2, 2, 0, 1, 2] },
+      { id: "q5c", text: "신체적, 정신적 건강", value: [0, 0, 3, 0, 2, 1] },
+      { id: "q5d", text: "연결과 공유 경험", value: [1, 0, 1, 3, 0, 1] },
+      { id: "q5e", text: "문화적 감상과 지식", value: [2, 1, 0, 1, 3, 2] }
     ]
   }
 ];
